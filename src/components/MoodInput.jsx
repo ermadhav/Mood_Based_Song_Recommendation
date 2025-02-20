@@ -3,7 +3,7 @@ export default function MoodInput() {
       <input
         type="text"
         placeholder="What are you thinking?"
-        className="bg-gray-800 text-gray-400 p-2 rounded-md w-full focus:outline-none"
+        className="bg-gray-800 text-gray-300 p-3 rounded-lg w-full focus:outline-none placeholder-gray-500"
       />
     );
   }

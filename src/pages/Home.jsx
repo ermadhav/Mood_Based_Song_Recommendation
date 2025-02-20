@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <ThemeWrapper>
       <Header />
-      <div className="flex items-center space-x-4 bg-gray-800 p-3 rounded-lg">
+      <div className="flex items-center space-x-4 bg-gray-800 p-4 rounded-lg w-full max-w-lg shadow-lg">
         <MoodInput />
         <LanguageSelector />
       </div>
