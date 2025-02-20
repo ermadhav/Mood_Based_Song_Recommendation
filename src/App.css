@@ -1,148 +1,52 @@
-/* Light and Dark Mode Variables */
-:root {
-  --bg-dark: #181818;
-  --text-dark: #ffffff;
-  --input-dark: #222;
-  --button-dark: #333;
-  --button-hover-dark: #444;
-
-  --bg-light: #f5f5f5;
-  --text-light: #181818;
-  --input-light: #ffffff;
-  --button-light: #ddd;
-  --button-hover-light: #ccc;
-}
-
-/* General Styles */
-body, html {
+body {
   margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, sans-serif;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
-/* Dark Mode */
 .app.dark {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
+  background-color: #181818;
+  color: white;
 }
 
-/* Light Mode */
 .app.light {
-  background-color: var(--bg-light);
-  color: var(--text-light);
+  background-color: white;
+  color: black;
 }
 
-/* Center Container */
 .container {
   text-align: center;
-  width: 100%;
-  max-width: 500px;
 }
 
-/* Title */
-h1 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Input and Dropdown Container */
 .input-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: var(--input-dark);
-  padding: 12px;
-  border-radius: 8px;
-  width: 380px;
-  margin: 15px auto;
-}
-
-.app.light .input-container {
-  background-color: var(--input-light);
+  padding: 10px;
+  background: #333;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 20px auto;
 }
 
 input {
   flex: 1;
-  background: transparent;
+  background: none;
   border: none;
-  outline: none;
-  color: var(--text-dark);
-  font-size: 1rem;
-  padding: 10px;
-}
-
-.app.light input {
-  color: var(--text-light);
-}
-
-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.app.light input::placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-/* Dropdown */
-select {
-  background-color: var(--button-dark);
-  color: var(--text-dark);
-  border: none;
-  padding: 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.app.light select {
-  background-color: var(--button-light);
-  color: var(--text-light);
-}
-
-/* Buttons */
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 15px;
+  color: white;
 }
 
 button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  background: yellow;
   padding: 10px 15px;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: var(--button-dark);
-  color: var(--text-dark);
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: var(--button-hover-dark);
-}
-
-.app.light button {
-  background-color: var(--button-light);
-  color: var(--text-light);
-}
-
-.app.light button:hover {
-  background-color: var(--button-hover-light);
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-  margin-top: 20px;
-  background: #ffcc00;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
 }
