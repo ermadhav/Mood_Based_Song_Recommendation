@@ -2,7 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth Font */
+/* Default to Dark Mode */
 body {
   font-family: 'Inter', sans-serif;
+}
+
+.dark-theme {
+  background-color: #181818;
+  color: white;
+}
+
+.light-theme {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+}
+
+/* Input & Buttons */
+.input-container {
+  background-color: #252525;
+}
+
+.light-theme .input-container {
+  background-color: #e0e0e0;
+}
+
+button {
+  background-color: #3c3c3c;
+  border: 1px solid #505050;
+}
+
+.light-theme button {
+  background-color: #d0d0d0;
+  color: black;
+  border: 1px solid #bbbbbb;
+}
+
+button:hover {
+  background-color: #505050;
+}
+
+.light-theme button:hover {
+  background-color: #c0c0c0;
 }
