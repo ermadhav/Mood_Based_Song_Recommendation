@@ -2,35 +2,34 @@ import React, { useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [language, setLanguage] = useState("English");
+  const [darkMode, setDarkMode] = useState(true);
+  const [language, setLanguage] = useState("Turkish");
 
   return (
-    <div className={`app ${darkMode ? "dark" : ""}`}>
-      <h1>Mood-Based Music Recommender</h1>
-      <h2>Find music based on your mood</h2>
-
-      <div className="input-container">
-        <input type="text" placeholder="What are you thinking?" />
-        <select value={language} onChange={(e) => setLanguage(e.target.value)}>
-          <option value="English">English</option>
-          <option value="Hindi">Hindi</option>
-          <option value="Spanish">Spanish</option>
-          <option value="French">French</option>
-          <option value="Turkish">Turkish</option>
-        </select>
-      </div>
-
-      <div style={{ marginTop: "20px" }}>
-        <button className="get-music">Get Music</button>
-        <button className="get-playlist" style={{ marginLeft: "10px" }}>
-          Get Playlist
+    <div className={`app ${darkMode ? "dark" : "light"}`}>
+      <div className="container">
+        <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
         </button>
-      </div>
 
-      <button className="toggle-mode" onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-      </button>
+        <h1>Mood-Based Music Recommender</h1>
+
+        <div className="input-container">
+          <input type="text" placeholder="What are you thinking?" />
+          <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+            <option value="Turkish">Turkish</option>
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="Hindi">Hindi</option>
+          </select>
+        </div>
+
+        <div className="button-container">
+          <button>Get Music</button>
+          <button>Get Playlist</button>
+        </div>
+      </div>
     </div>
   );
 };
