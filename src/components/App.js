@@ -1,11 +1,11 @@
 // src/App.js
 import React from 'react';
-import Header from './Header';
+import MusicRecommender from './MusicRecommender';
 
 function App() {
     return (
         <div>
-            <Header />
+            <MusicRecommender />
         </div>
     );
 }

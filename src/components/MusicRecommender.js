@@ -1,7 +1,7 @@
 // src/MusicRecommender.js
 import React, { useState } from 'react';
 
-const Header = () => {
+const MusicRecommender = () => {
     const [thoughts, setThoughts] = useState('');
     const [language, setLanguage] = useState('Turkish');
 
@@ -83,4 +83,4 @@ const styles = {
     }
 };
 
-export default Header;
+export default MusicRecommender;
