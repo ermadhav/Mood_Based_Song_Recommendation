@@ -2,17 +2,16 @@ import Header from "../components/Header";
 import MoodInput from "../components/MoodInput";
 import LanguageSelector from "../components/LanguageSelector";
 import MusicButtons from "../components/MusicButtons";
-import ThemeWrapper from "../components/ThemeWrapper";
 
 export default function Home() {
   return (
-    <ThemeWrapper>
+    <div className="h-screen flex flex-col justify-center items-center bg-[#181818]">
       <Header />
-      <div className="flex items-center space-x-4 bg-gray-800 p-4 rounded-lg w-full max-w-lg shadow-lg">
+      <div className="flex items-center space-x-2 bg-[#252525] p-3 rounded-md">
         <MoodInput />
         <LanguageSelector />
       </div>
       <MusicButtons />
-    </ThemeWrapper>
+    </div>
   );
 }
